@@ -19,6 +19,14 @@ class UserController (
     @GetMapping("{id}")
     fun getUser(@PathVariable id: Int): UserDTO = userService.getUser(id)
 
+    @GetMapping("{id}")
+    fun removeUser(@PathVariable id: Int): UserDTO = userService.getUser(id)
+
+    @GetMapping("{id}")
+    fun updateUser(@PathVariable id: Int, @RequestBody userDTO: UserDTO): UserDTO = userService.updateUser(id, userDTO)
+
+
+
 
 
 }

@@ -31,6 +31,25 @@ class UserServiceImpl (
         return userDTO
 
     }
+    override fun deleteUser(id : Int): UserDTO {
+        val userDTO : UserDTO?= repository.removeUser(id)
+
+        if ( userDTO == null){
+            throw ResponseStatusException(HttpStatus.NOT_FOUND, "user.not.found")
+        }
+        return userDTO
 
 
+
+    }
+
+    override fun updateUser(user: Int, userDTO: UserDTO): UserDTO {
+
+
+        if ( user == null){
+            throw ResponseStatusException(HttpStatus.NOT_FOUND, "user.not.found")
+        }
+        return repository.updateUser(user, userDTO)
+
+    }
 }

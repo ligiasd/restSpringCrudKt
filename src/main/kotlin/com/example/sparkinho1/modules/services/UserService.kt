@@ -7,5 +7,7 @@ interface UserService {
     fun getUserList(): List<UserDTO>
     fun createUser(userDTO: UserDTO): UserDTO
     fun getUser(id: Int): UserDTO
+    fun deleteUser(id: Int) : UserDTO
+    fun updateUser(user: Int, userDTO: UserDTO) :UserDTO
 
 }

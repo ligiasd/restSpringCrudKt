@@ -25,5 +25,15 @@ class UserRepositoryImpl : UserRepository {
         return repository.get(id)
     }
 
+    override fun removeUser(id : Int) : UserDTO? {
+        return repository.remove(id)
+    }
+
+    override fun updateUser(id: Int, userDTO: UserDTO): UserDTO {
+        return userDTO
+
+
+    }
+
 
 }
