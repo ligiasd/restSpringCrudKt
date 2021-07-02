@@ -1,0 +1,13 @@
+package com.example.sparkinho1
+
+import org.junit.jupiter.api.Test
+import org.springframework.boot.test.context.SpringBootTest
+
+@SpringBootTest
+class Sparkinho1ApplicationTests {
+
+	@Test
+	fun contextLoads() {
+	}
+
+}
